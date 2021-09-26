@@ -82,5 +82,3 @@ console.log(`The tip is ${tip}`);
 console.log(`The bill was ${bill} , The tip was ${tip} , The total $(bill + tip)`);
 
 
-
-
