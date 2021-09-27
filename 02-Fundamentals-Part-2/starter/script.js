@@ -39,19 +39,18 @@ const jonas = {
 };
 console.log(jonas.getSummary());
 */
+
 const MarkMiller = {
     Name : 'MarkMiller',
-    Mass : 78,
-    Height : 1.69,
+    Mass : 100,
+    Height : 0.69,
     higherBMI : true,
     calcBMI : function(){
         this.bmi = this.Mass / this.Height ** 2;
         return this.bmi;
-    },
-    high : function(){
-        return `${this.Name} BMI ${this.higherBMI? higher than John ${this.calcBMI()}: lower than John}`;
     }
 };
+
 const JohnSmith = {
     Name : 'JohnSmith',
     Mass : 92,
@@ -61,5 +60,9 @@ const JohnSmith = {
         return this.bmi;
     }
 };
+const high = function() {
+    return `${(MarkMiller.calcBMI() > JohnSmith.calcBMI()) ? MarkMiller.Name  : JohnSmith.Name} HAS got a higer BMI`;
+};
+
 console.log(MarkMiller.calcBMI(), JohnSmith.calcBMI());
-console.log(MarkMiller.high());
+console.log(high());
