@@ -258,7 +258,7 @@ return `${(mark.calcBMI()>john.calcBMI()) ? `${mark.fullName} BMI (${mark.calcBM
 console.log(mark.calcBMI(),john.calcBMI());
 console.log(high());
 
-
+ 
 const bills = [22,295,176,440,37,105,10,1100,86,52];
 const tips =[];
 const totals=[];
@@ -281,3 +281,53 @@ const calcAverage = function(arr){
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
 */
+
+// given an array of temperatures of one day,calculate temperature amplitude,sometimes may be sensor error
+// steps: temperature amplitude is high value - low value
+// how to find high and low value
+// find ignore errors min value,max values,return these values
+const temperature = [-3,-2,4,5,'error',9,6];
+const calcTempAmplitude = function(temps){
+    let max = temps[0];
+    let min = temps[0];
+    for (let i=0; i<temps.length; i++){
+        if(typeof temps[i]!=='number') continue;
+        if(temps[i]>max) max = temps[i];
+        if(temps[i]<min) min = temps[i];
+    }
+    console.log(min,max);
+    return max - min;
+};
+const amplitude = calcTempAmplitude(temperature);
+console.log(amplitude);
+
+
+// to join 2 arrays in function
+const t1 = [1,2,3];
+const t2 = [4,5,6];
+const t3 = t1.concat(t2);
+const calcTempsAmplitude = function(t3){
+    let max = t3[0];
+    let min = t3[0];
+    for (let i=0; i<t3.length; i++){
+        if(typeof t3[i]!=='number') continue;
+        if(t3[i]>max) max = t3[i];
+        if(t3[i]<min) min = t3[i];
+    }
+    console.log(min,max);
+    return max - min;
+};
+const amp = calcTempsAmplitude(t3);
+console.log(amp);
+
+// thermometer displays a string with temp
+// frst need to convert array to str
+const data1 = [17,21,23];
+const printForecast = function(arr){
+    let str='';
+    for ( let i=0; i<arr.length; i++){
+        str = str + `${arr[i]}C in ${i+1} days...`;
+    }
+    console.log(`...`+str);
+};
+printForecast(data1);
