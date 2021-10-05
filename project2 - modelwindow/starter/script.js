@@ -7,7 +7,7 @@ const btnOpenModal = document.querySelectorAll('.show-modal');
 
 const openModal = function(){
     console.log('Button clicked');
-    modal.classList.remove('hidden');  // . should be used only in queryselector
+    modal.classList.remove('hidden');  // . dot should be used only in queryselector
     overlay.classList.remove('hidden');
 };
 const closeModal = function(){
@@ -22,7 +22,7 @@ for(let i=0; i<btnOpenModal.length; i++)
     
 document.addEventListener('keydown',function(e){    // can enter any name as argument instead of e
    
-    if(e.key=='Escape' && !modal.classList.contains('hidden')){      //in Escape 'E' should be in caps       // e.key means e property in obj key ie.,keyboard
+    if(e.key=='Escape' && !modal.classList.contains('hidden')){      //in Escape 'E' should be in caps // e.key means e property in obj key ie.,keyboard
         closeModal();
     }
     });
