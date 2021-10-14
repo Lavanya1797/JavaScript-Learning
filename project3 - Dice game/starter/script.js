@@ -17,7 +17,7 @@ let scores,currentScore,activePlayer,playing; // just declared variables withput
 const init = function(){     // init stands for initialization we can use any names here
     
     scores = [0,0];
-    currentScore = 0; //its declared outside loop bcz if its inside loop then on each click currentscore sets to 0
+    currentScore = 0; //its declared outside loop bcz if its inside other loop then on each click currentscore sets to 0
     activePlayer = 0;
     playing = true;
     
@@ -75,3 +75,4 @@ btnHold.addEventListener('click',function(){
 });
 
 btnNew.addEventListener('click',init)
+

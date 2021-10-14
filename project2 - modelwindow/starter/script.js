@@ -21,8 +21,10 @@ for(let i=0; i<btnOpenModal.length; i++)
     overlay.addEventListener('click',closeModal);
     
 document.addEventListener('keydown',function(e){    // can enter any name as argument instead of e
-   
-    if(e.key=='Escape' && !modal.classList.contains('hidden')){      //in Escape 'E' should be in caps // e.key means e property in obj key ie.,keyboard
+    console.log(e.key);
+    if(e.key=='Escape' && !modal.classList.contains('hidden')){      //in Escape 'E' should be in caps // e.key means key property in obj e ie.,keyboard
         closeModal();
     }
     });
+    
+        
